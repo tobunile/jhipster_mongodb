@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "test",
+    "packageName": "org.blub",
+    "packageFolder": "org/blub",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": false,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "b9f9d015dcdc25c1c3b0d0c62f0383cafaf26611",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}
