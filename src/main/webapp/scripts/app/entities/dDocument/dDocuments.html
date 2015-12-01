@@ -1,0 +1,50 @@
+<div>
+    <h2>DDocuments</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="dDocument.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span>Create a new DDocument</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Directories</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="dDocument in dDocuments track by dDocument.id">
+                    <td><a ui-sref="dDocument.detail({id:dDocument.id})">{{dDocument.id}}</a></td>
+                    <td>{{dDocument.name}}</td>
+                    <td>{{dDocument.directories}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="dDocument.detail({id:dDocument.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="dDocument.edit({id:dDocument.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="dDocument.delete({id:dDocument.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
